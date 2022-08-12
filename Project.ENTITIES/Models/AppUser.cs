@@ -10,13 +10,19 @@ namespace Project.ENTITIES.Models
 {
     public class AppUser : BaseEntity
     {
+
+        public AppUser()
+        {
+            Role = UserRole.Member;
+            ActivationCode = Guid.NewGuid();
+        }
         public string UserName { get; set; }
         public string Password { get; set; }
         public Guid ActivationCode { get; set; }
         public bool Active { get; set; }
         public string Email { get; set; }
         public UserRole Role { get; set; }
-        public int MyProperty { get; set; }
+        
 
 
 

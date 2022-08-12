@@ -8,6 +8,11 @@ namespace Project.ENTITIES.Models
 {
     public class Category : BaseEntity
     {
+
+        public Category()
+        {
+            Products = new List<Product>();
+        }
         public string CategoryName { get; set; }
         public string Description { get; set; }
 
